@@ -1,2 +1,2 @@
-# Sparse-Matrix-Multiplication
-Sparse-Matrix-Multiplication
+# sparse-matrix-multiplication
+sparse-matrix-multiplication
