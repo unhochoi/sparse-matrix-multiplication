@@ -3,10 +3,10 @@
 library(AlgDesign)
 
 # 최적화 데이터를 뽑고자 하는 입력 데이터
-input = read.csv("/Users/bdlab/Desktop/sparse-matrix-multiplication/scenario-extraction/d-optimal/spmm-of-d-optimal-data/lr-150000-lc-100000-rc-50000/1293-spmm-over-3s-and-add-feature.csv")
+input = read.csv("/Users/bdlab/Desktop/sparse-matrix-multiplication/scenario-extraction/d-optimal/spmm-of-d-optimal-data/lr-150000-lc-100000-rc-50000/2268-spmm-over-3s.csv")
 
 # data : 입력 데이터 , nTrials : 뽑을 데이터 개수, nRepeats : 전체 프로세스 반복 횟수, criterion : 사용할 최적화 방법
-output = optFederov(data=input, nTrials=1164, nRepeats=100,criterion = "D")
+output = optFederov(data=input, nTrials=2042, nRepeats=100,criterion = "D")
 
 # 전체 결과
 output
@@ -23,4 +23,4 @@ output$rows
 setwd("/Users/bdlab/Desktop/sparse-matrix-multiplication/scenario-extraction/d-optimal/d-optimal-of-spmm/train-test-csv")
 
 # 추출된 행렬 csv로 저장, 작업 경로 변경 필요시 setwd("경로")로 변경
-write.csv(output$design, file="1164-train-from-1293-spmm-over-3s-and-add-feature.csv", row.names=FALSE) # row.names : 행 포함 여부
+write.csv(output$design, file="2042-train-from-2268-spmm-over-3s.csv", row.names=FALSE) # row.names : 행 포함 여부
